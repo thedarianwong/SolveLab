@@ -6,6 +6,8 @@ import "./App.css";
 
 function App() {
   const [problem, setProblem] = useState("");
+  const [solution, setSolution] = useState("");
+  const [steps, setSteps] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -24,7 +26,7 @@ function App() {
           handleSubmit={handleSubmit}
         />
       </div>
-      <Output />
+      <Output solution={solution} steps={steps} />
     </div>
   );
 }

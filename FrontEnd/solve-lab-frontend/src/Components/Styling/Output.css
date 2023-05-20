@@ -1,0 +1,13 @@
+.output-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f0f0f0; /* Set desired background color */
+  margin-top: 4rem;
+}
+
+.result {
+  margin-top: 1rem; /* Add margin as needed */
+}

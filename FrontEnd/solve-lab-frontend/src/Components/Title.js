@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Box } from "@mui/material";
-import Logo from "./Logo.jpg"; // Replace with your logo file and path
-import "./Title.css"; // Create a CSS file for custom styles
+import Logo from "./Images/Logo.jpg"; // Replace with your logo file and path
+import "./Styling/Title.css"; // Create a CSS file for custom styles
 
 const Title = () => {
   return (

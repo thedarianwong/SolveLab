@@ -1,0 +1,20 @@
+.text-field-container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.text-field {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem; /* Adjust the margin as needed */
+}
+
+.solve-button {
+  width: 100px; /* Adjust the button width as needed */
+  height: 50px;
+}

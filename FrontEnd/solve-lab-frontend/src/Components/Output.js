@@ -1,12 +1,22 @@
 import React from "react";
-import { Box } from "@mui/material";
-import "./Styling/Output.css"; // Create a CSS file for custom styles
+import { Box, Typography } from "@mui/material";
+import "./Styling/Output.css";
 
-const Output = ({ result }) => {
+const Output = ({ solution, steps }) => {
   return (
-    <Box className="output-container">
-      <h2>Output:</h2>
-      <div className="result">{result}</div>
+    <Box component="div" className="output-container">
+      <Box component="div" className="output-box solution-box">
+        <Typography variant="body1" gutterBottom>
+          <strong>Solution:</strong>
+        </Typography>
+        <Typography variant="body1">{solution}</Typography>
+      </Box>
+      <Box component="div" className="output-box steps-box">
+        <Typography variant="body1" gutterBottom>
+          <strong>Steps:</strong>
+        </Typography>
+        <Typography variant="body1">{steps}</Typography>
+      </Box>
     </Box>
   );
 };

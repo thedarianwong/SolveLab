@@ -1,13 +1,25 @@
 .output-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  background-color: #f0f0f0; /* Set desired background color */
-  margin-top: 4rem;
+  gap: 10px;
+  height: 100vh;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: ivory;
 }
 
-.result {
-  margin-top: 1rem; /* Add margin as needed */
+.output-box {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.solution-box {
+  flex: 1;
+}
+
+.steps-box {
+  flex: 2;
 }

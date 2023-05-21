@@ -19,7 +19,7 @@ app.post("/solve", async (req, res) => {
   const problem = req.body.problem;
 
   try {
-    const solution = "";
+    const solution = await getSolutionFromWolfram(problem);
     const steps = await getStepsFromOpenAI(problem, solution);
     res.json({ solution, steps });
   } catch (err) {

@@ -36,7 +36,7 @@
     opacity: 0;
     transform: translateX(-50%);
   }
-  50% {
+  60% {
     opacity: 0; /* Hide the title at 50% of animation */
   }
   100% {

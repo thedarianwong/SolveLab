@@ -12,6 +12,7 @@ const Input = ({ problem, setProblem, handleSubmit }) => {
   useEffect(() => {
     renderMath("math-input", problem);
   }, [problem]);
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="text-field-container">

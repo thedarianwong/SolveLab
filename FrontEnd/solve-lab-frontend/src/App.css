@@ -1,3 +1,14 @@
 .home-page {
   height: 100vh;
 }
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.answer-page {
+  height: 100vh;
+}

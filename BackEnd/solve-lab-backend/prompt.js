@@ -11,6 +11,6 @@
 //   "Continue with the remaining steps until the solution is reached. Be sure to explain each step in a clear and understandable manner, using appropriate mathematical language and notation.";
 
 const prompt =
-  "I have a math problem and I know the correct solution. The problem is: '${problem}'. The solution is: '${solution}'. However, I'm not sure how to get to that solution. Could you provide a step-by-step guide explaining how to solve the problem and arrive at that solution?";
+  "I have a math problem and I know the correct solution. The problem is: '${problem}'. The solution is: '${solution}'. However, I'm not sure how to get to that solution. Could you provide a step-by-step guide explaining how to solve the problem and arrive at that solution? If there is no solution given, please come up with a solution yourself and explain it step by step.";
 
 module.exports = prompt;

@@ -1,22 +1,9 @@
 .home-page {
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .answer-page {
-  min-height: 100vh;
-}
-
-.loading-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.8);
+  height: 100vh;
 }
 
 .loading-container {

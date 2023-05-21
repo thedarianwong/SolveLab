@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="wrapper">
       <div className="home-page">
         <Title />
         <Input

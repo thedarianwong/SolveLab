@@ -23,3 +23,9 @@
 .steps-box {
   flex: 2;
 }
+
+@media (max-width: 768px) {
+  .output-container {
+    height: 100vh;
+  }
+}

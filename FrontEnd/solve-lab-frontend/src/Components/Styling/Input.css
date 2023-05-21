@@ -11,10 +11,20 @@
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem; /* Adjust the margin as needed */
+  margin-top: 1rem;
+  margin-bottom: auto;
 }
 
 .solve-button {
   width: 100px; /* Adjust the button width as needed */
   height: 50px;
+}
+
+@media (max-width: 768px) {
+  .wrap-container {
+    height: 100vh;
+  }
+  .text-field-container {
+    padding-top: 2rem;
+  }
 }

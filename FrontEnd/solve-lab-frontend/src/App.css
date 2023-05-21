@@ -18,3 +18,12 @@
   z-index: 999;
   background: rgba(255, 255, 255, 0.8);
 }
+
+@media (max-width: 768px) {
+  .home-page {
+    height: 200vh;
+  }
+  .answer-page {
+    height: 100vh;
+  }
+}

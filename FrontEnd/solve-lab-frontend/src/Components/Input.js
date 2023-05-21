@@ -4,7 +4,7 @@ import "./Styling/Input.css";
 
 const Input = ({ problem, setProblem, handleSubmit }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="wrap-container" onSubmit={handleSubmit}>
       <div className="text-field-container">
         <TextField
           variant="outlined"

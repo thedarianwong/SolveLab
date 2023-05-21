@@ -60,11 +60,14 @@ Some future improvements planned for SolveLab:
 - Support for more complex mathematical problems.
 - Improve error handling and user feedback.
 - Improve loading spinner's look and feel.
+- Support conversion for any maths problems to satisfy the requirements of Wolfram input. (Wolfram do not understand some questions format)
+- Implement a math keyboard input for mathematical notations.
 
 ## Inspirations
 
 - I am a Mathematics and Computing Science student, so I thought having a tool like this would give me some references when I am solving math homeworks.
 - I wanted to build a simple web application that is straightforward, easy-to-use and helpful to math students.
+- Articles has proven that GPT is not proficient in maths and often make lots of errors, however, I think the explanation given by GPT is human readable and understandable. So, I implement Wolfram whereas their computational is exceptional, so given the correct solutions, we put it into GPT to generate a step by step walkthrough. This will minimize the error in calculations.
 
 ## Contributions
 

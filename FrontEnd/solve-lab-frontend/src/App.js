@@ -25,8 +25,6 @@ function App() {
 
     setLoading(true);
 
-    // Here, you will call the server-side logic to solve the problem.
-    // We'll implement this later.
     try {
       const response = await axios.post("http://localhost:5000/solve", {
         problem,
@@ -35,7 +33,6 @@ function App() {
       setSteps(response.data.steps);
     } catch (error) {
       console.error(error);
-      // handle the error...
     }
 
     setLoading(false);
@@ -51,17 +48,16 @@ function App() {
           handleSubmit={handleSubmit}
         />
       </div>
-      <div className="answer-page">
-        {loading ? (
-          <div className="loading-container">
-            <CircularProgress />
-          </div>
-        ) : (
-          <div ref={outputRef}>
-            <Output solution={solution} steps={steps} />
-          </div>
-        )}
-      </div>
+      {loading && (
+        <div className="loading-container">
+          <CircularProgress />
+        </div>
+      )}
+      {(solution || steps) && (
+        <div className="answer-page" ref={outputRef}>
+          <Output solution={solution} steps={steps} />
+        </div>
+      )}
     </div>
   );
 }

@@ -19,7 +19,7 @@ app.post("/solve", async (req, res) => {
   const problem = req.body.problem;
 
   try {
-    const solution = await getSolutionFromWolfram(problem);
+    const solution = "NONE";
     const steps = await getStepsFromOpenAI(problem, solution);
     res.json({ solution, steps });
   } catch (err) {
@@ -40,7 +40,8 @@ async function getSolutionFromWolfram(problem) {
 
     const pods = response.data.queryresult?.pods;
     if (!pods || pods.length < 2) {
-      throw new Error("Invalid response data");
+      const solution = "No Correct Solutions but I will try to Prove!";
+      return solution;
     }
 
     const solutionPod = pods[1];
@@ -50,7 +51,8 @@ async function getSolutionFromWolfram(problem) {
       !solutionPod.subpods ||
       solutionPod.subpods.length === 0
     ) {
-      throw new Error("No solution found");
+      const solution = "No Solutions Found";
+      return solution;
     }
 
     const solution = solutionPod.subpods[0].plaintext;

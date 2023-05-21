@@ -1,18 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { TextField, Button } from "@mui/material";
-import "./Styling/Input.css"; // Create a CSS file for custom styles
-import katex from "katex";
-import "katex/dist/katex.min.css";
-
-const renderMath = (elementId, expression) => {
-  katex.render(expression, document.getElementById(elementId));
-};
+import "./Styling/Input.css";
 
 const Input = ({ problem, setProblem, handleSubmit }) => {
-  useEffect(() => {
-    renderMath("math-input", problem);
-  }, [problem]);
-
   return (
     <form onSubmit={handleSubmit}>
       <div className="text-field-container">
@@ -25,9 +15,14 @@ const Input = ({ problem, setProblem, handleSubmit }) => {
           margin="normal"
           value={problem}
           onChange={(e) => setProblem(e.target.value)}
-          inputProps={{ id: "math-input" }}
           className="text-field"
         />
+        {/* Display MathJax content
+        <MathJax.Provider>
+          <div id="math-input">
+            <MathJax.Node formula={problem} />
+          </div>
+        </MathJax.Provider> */}
       </div>
       <div className="button-container">
         <Button

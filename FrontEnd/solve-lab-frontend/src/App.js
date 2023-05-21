@@ -26,9 +26,12 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/solve", {
-        problem,
-      });
+      const response = await axios.post(
+        "https://solve-lab-backend.onrender.com/solve",
+        {
+          problem,
+        }
+      );
       setSolution(response.data.solution);
       setSteps(response.data.steps);
     } catch (error) {

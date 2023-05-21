@@ -41,6 +41,21 @@ function App() {
     setLoading(false);
   };
 
+  const adjustPageHeight = () => {
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
+    // Adjust the height of the home page
+    const homePage = document.querySelector(".home-page");
+    if (homePage) {
+      homePage.style.minHeight = `${vh}px`;
+    }
+  };
+
+  // Call the adjustPageHeight function initially and on window resize
+  window.addEventListener("resize", adjustPageHeight);
+  adjustPageHeight();
+
   return (
     <div className="wrapper">
       <div className="home-page">
